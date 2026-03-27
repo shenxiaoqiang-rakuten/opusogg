@@ -1,0 +1,1903 @@
+{
+  "ABIRoot": {
+    "kind": "Root",
+    "name": "OpusOGG",
+    "printedName": "OpusOGG",
+    "children": [
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "OpusOGG",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "Combine",
+        "printedName": "Combine",
+        "declKind": "Import",
+        "moduleName": "OpusOGG",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "Darwin",
+        "printedName": "Darwin",
+        "declKind": "Import",
+        "moduleName": "OpusOGG"
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "OpusOGG"
+      },
+      {
+        "kind": "Import",
+        "name": "opusogg",
+        "printedName": "opusogg",
+        "declKind": "Import",
+        "moduleName": "OpusOGG",
+        "declAttributes": [
+          "ImplementationOnly"
+        ]
+      },
+      {
+        "kind": "TypeDecl",
+        "name": "OpusOGGDecoder",
+        "printedName": "OpusOGGDecoder",
+        "children": [
+          {
+            "kind": "Var",
+            "name": "publisher",
+            "printedName": "publisher",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "AnyPublisher",
+                "printedName": "Combine.AnyPublisher<OpusOGG.OpusOGGDecodedPCM, OpusOGG.OpusOGGError>",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "OpusOGGDecodedPCM",
+                    "printedName": "OpusOGG.OpusOGGDecodedPCM",
+                    "usr": "s:7OpusOGG0A13OGGDecodedPCMV"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "OpusOGGError",
+                    "printedName": "OpusOGG.OpusOGGError",
+                    "usr": "s:7OpusOGG0A8OGGErrorO"
+                  }
+                ],
+                "usr": "s:7Combine12AnyPublisherV"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:7OpusOGG0A10OGGDecoderC9publisher7Combine12AnyPublisherVyAA0A13OGGDecodedPCMVAA0A8OGGErrorOGvp",
+            "mangledName": "$s7OpusOGG0A10OGGDecoderC9publisher7Combine12AnyPublisherVyAA0A13OGGDecodedPCMVAA0A8OGGErrorOGvp",
+            "moduleName": "OpusOGG",
+            "declAttributes": [
+              "Final",
+              "AccessControl"
+            ],
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "AnyPublisher",
+                    "printedName": "Combine.AnyPublisher<OpusOGG.OpusOGGDecodedPCM, OpusOGG.OpusOGGError>",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "OpusOGGDecodedPCM",
+                        "printedName": "OpusOGG.OpusOGGDecodedPCM",
+                        "usr": "s:7OpusOGG0A13OGGDecodedPCMV"
+                      },
+                      {
+                        "kind": "TypeNominal",
+                        "name": "OpusOGGError",
+                        "printedName": "OpusOGG.OpusOGGError",
+                        "usr": "s:7OpusOGG0A8OGGErrorO"
+                      }
+                    ],
+                    "usr": "s:7Combine12AnyPublisherV"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:7OpusOGG0A10OGGDecoderC9publisher7Combine12AnyPublisherVyAA0A13OGGDecodedPCMVAA0A8OGGErrorOGvg",
+                "mangledName": "$s7OpusOGG0A10OGGDecoderC9publisher7Combine12AnyPublisherVyAA0A13OGGDecodedPCMVAA0A8OGGErrorOGvg",
+                "moduleName": "OpusOGG",
+                "declAttributes": [
+                  "Final"
+                ],
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Constructor",
+            "name": "init",
+            "printedName": "init()",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "OpusOGGDecoder",
+                "printedName": "OpusOGG.OpusOGGDecoder",
+                "usr": "s:7OpusOGG0A10OGGDecoderC"
+              }
+            ],
+            "declKind": "Constructor",
+            "usr": "s:7OpusOGG0A10OGGDecoderCACycfc",
+            "mangledName": "$s7OpusOGG0A10OGGDecoderCACycfc",
+            "moduleName": "OpusOGG",
+            "declAttributes": [
+              "AccessControl"
+            ],
+            "init_kind": "Designated"
+          },
+          {
+            "kind": "Function",
+            "name": "appendOggBytes",
+            "printedName": "appendOggBytes(_:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Data",
+                "printedName": "Foundation.Data",
+                "usr": "s:10Foundation4DataV"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:7OpusOGG0A10OGGDecoderC14appendOggBytesyy10Foundation4DataVF",
+            "mangledName": "$s7OpusOGG0A10OGGDecoderC14appendOggBytesyy10Foundation4DataVF",
+            "moduleName": "OpusOGG",
+            "declAttributes": [
+              "Final",
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "finish",
+            "printedName": "finish()",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:7OpusOGG0A10OGGDecoderC6finishyyF",
+            "mangledName": "$s7OpusOGG0A10OGGDecoderC6finishyyF",
+            "moduleName": "OpusOGG",
+            "declAttributes": [
+              "Final",
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "funcSelfKind": "NonMutating"
+          }
+        ],
+        "declKind": "Class",
+        "usr": "s:7OpusOGG0A10OGGDecoderC",
+        "mangledName": "$s7OpusOGG0A10OGGDecoderC",
+        "moduleName": "OpusOGG",
+        "declAttributes": [
+          "Final",
+          "AccessControl",
+          "RawDocComment"
+        ],
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Sendable",
+            "printedName": "Sendable",
+            "usr": "s:s8SendableP",
+            "mangledName": "$ss8SendableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "SendableMetatype",
+            "printedName": "SendableMetatype",
+            "usr": "s:s16SendableMetatypeP",
+            "mangledName": "$ss16SendableMetatypeP"
+          }
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "Combine",
+        "printedName": "Combine",
+        "declKind": "Import",
+        "moduleName": "OpusOGG",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "OpusOGG"
+      },
+      {
+        "kind": "Import",
+        "name": "opusogg",
+        "printedName": "opusogg",
+        "declKind": "Import",
+        "moduleName": "OpusOGG",
+        "declAttributes": [
+          "ImplementationOnly"
+        ]
+      },
+      {
+        "kind": "TypeDecl",
+        "name": "OpusOGGEncoder",
+        "printedName": "OpusOGGEncoder",
+        "children": [
+          {
+            "kind": "Var",
+            "name": "publisher",
+            "printedName": "publisher",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "AnyPublisher",
+                "printedName": "Combine.AnyPublisher<OpusOGG.OpusOGGEncodedPage, OpusOGG.OpusOGGError>",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "OpusOGGEncodedPage",
+                    "printedName": "OpusOGG.OpusOGGEncodedPage",
+                    "usr": "s:7OpusOGG0A14OGGEncodedPageV"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "OpusOGGError",
+                    "printedName": "OpusOGG.OpusOGGError",
+                    "usr": "s:7OpusOGG0A8OGGErrorO"
+                  }
+                ],
+                "usr": "s:7Combine12AnyPublisherV"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:7OpusOGG0A10OGGEncoderC9publisher7Combine12AnyPublisherVyAA0A14OGGEncodedPageVAA0A8OGGErrorOGvp",
+            "mangledName": "$s7OpusOGG0A10OGGEncoderC9publisher7Combine12AnyPublisherVyAA0A14OGGEncodedPageVAA0A8OGGErrorOGvp",
+            "moduleName": "OpusOGG",
+            "declAttributes": [
+              "Final",
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "AnyPublisher",
+                    "printedName": "Combine.AnyPublisher<OpusOGG.OpusOGGEncodedPage, OpusOGG.OpusOGGError>",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "OpusOGGEncodedPage",
+                        "printedName": "OpusOGG.OpusOGGEncodedPage",
+                        "usr": "s:7OpusOGG0A14OGGEncodedPageV"
+                      },
+                      {
+                        "kind": "TypeNominal",
+                        "name": "OpusOGGError",
+                        "printedName": "OpusOGG.OpusOGGError",
+                        "usr": "s:7OpusOGG0A8OGGErrorO"
+                      }
+                    ],
+                    "usr": "s:7Combine12AnyPublisherV"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:7OpusOGG0A10OGGEncoderC9publisher7Combine12AnyPublisherVyAA0A14OGGEncodedPageVAA0A8OGGErrorOGvg",
+                "mangledName": "$s7OpusOGG0A10OGGEncoderC9publisher7Combine12AnyPublisherVyAA0A14OGGEncodedPageVAA0A8OGGErrorOGvg",
+                "moduleName": "OpusOGG",
+                "declAttributes": [
+                  "Final"
+                ],
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Constructor",
+            "name": "init",
+            "printedName": "init(parameters:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "OpusOGGEncoder",
+                "printedName": "OpusOGG.OpusOGGEncoder",
+                "usr": "s:7OpusOGG0A10OGGEncoderC"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "OpusOGGEncoderParameters",
+                "printedName": "OpusOGG.OpusOGGEncoderParameters",
+                "usr": "s:7OpusOGG0A20OGGEncoderParametersV"
+              }
+            ],
+            "declKind": "Constructor",
+            "usr": "s:7OpusOGG0A10OGGEncoderC10parametersAcA0aC10ParametersV_tKcfc",
+            "mangledName": "$s7OpusOGG0A10OGGEncoderC10parametersAcA0aC10ParametersV_tKcfc",
+            "moduleName": "OpusOGG",
+            "declAttributes": [
+              "AccessControl"
+            ],
+            "throwing": true,
+            "init_kind": "Designated"
+          },
+          {
+            "kind": "Function",
+            "name": "appendPCM",
+            "printedName": "appendPCM(_:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Data",
+                "printedName": "Foundation.Data",
+                "usr": "s:10Foundation4DataV"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:7OpusOGG0A10OGGEncoderC9appendPCMyy10Foundation4DataVF",
+            "mangledName": "$s7OpusOGG0A10OGGEncoderC9appendPCMyy10Foundation4DataVF",
+            "moduleName": "OpusOGG",
+            "declAttributes": [
+              "Final",
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "finish",
+            "printedName": "finish()",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:7OpusOGG0A10OGGEncoderC6finishyyF",
+            "mangledName": "$s7OpusOGG0A10OGGEncoderC6finishyyF",
+            "moduleName": "OpusOGG",
+            "declAttributes": [
+              "Final",
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "funcSelfKind": "NonMutating"
+          }
+        ],
+        "declKind": "Class",
+        "usr": "s:7OpusOGG0A10OGGEncoderC",
+        "mangledName": "$s7OpusOGG0A10OGGEncoderC",
+        "moduleName": "OpusOGG",
+        "declAttributes": [
+          "Final",
+          "AccessControl",
+          "RawDocComment"
+        ],
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Sendable",
+            "printedName": "Sendable",
+            "usr": "s:s8SendableP",
+            "mangledName": "$ss8SendableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "SendableMetatype",
+            "printedName": "SendableMetatype",
+            "usr": "s:s16SendableMetatypeP",
+            "mangledName": "$ss16SendableMetatypeP"
+          }
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "OpusOGG",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "TypeDecl",
+        "name": "OpusOGGError",
+        "printedName": "OpusOGGError",
+        "children": [
+          {
+            "kind": "Var",
+            "name": "opusFailed",
+            "printedName": "opusFailed",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(OpusOGG.OpusOGGError.Type) -> (Swift.Int32) -> OpusOGG.OpusOGGError",
+                "children": [
+                  {
+                    "kind": "TypeFunc",
+                    "name": "Function",
+                    "printedName": "(Swift.Int32) -> OpusOGG.OpusOGGError",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "OpusOGGError",
+                        "printedName": "OpusOGG.OpusOGGError",
+                        "usr": "s:7OpusOGG0A8OGGErrorO"
+                      },
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Int32",
+                        "printedName": "Swift.Int32",
+                        "usr": "s:s5Int32V"
+                      }
+                    ]
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "OpusOGG.OpusOGGError.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "OpusOGGError",
+                        "printedName": "OpusOGG.OpusOGGError",
+                        "usr": "s:7OpusOGG0A8OGGErrorO"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "s:7OpusOGG0A8OGGErrorO10opusFailedyACs5Int32VcACmF",
+            "mangledName": "$s7OpusOGG0A8OGGErrorO10opusFailedyACs5Int32VcACmF",
+            "moduleName": "OpusOGG",
+            "declAttributes": [
+              "RawDocComment"
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "oggFailed",
+            "printedName": "oggFailed",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(OpusOGG.OpusOGGError.Type) -> OpusOGG.OpusOGGError",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "OpusOGGError",
+                    "printedName": "OpusOGG.OpusOGGError",
+                    "usr": "s:7OpusOGG0A8OGGErrorO"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "OpusOGG.OpusOGGError.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "OpusOGGError",
+                        "printedName": "OpusOGG.OpusOGGError",
+                        "usr": "s:7OpusOGG0A8OGGErrorO"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "s:7OpusOGG0A8OGGErrorO9oggFailedyA2CmF",
+            "mangledName": "$s7OpusOGG0A8OGGErrorO9oggFailedyA2CmF",
+            "moduleName": "OpusOGG",
+            "declAttributes": [
+              "RawDocComment"
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "invalidConfiguration",
+            "printedName": "invalidConfiguration",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(OpusOGG.OpusOGGError.Type) -> (Swift.String) -> OpusOGG.OpusOGGError",
+                "children": [
+                  {
+                    "kind": "TypeFunc",
+                    "name": "Function",
+                    "printedName": "(Swift.String) -> OpusOGG.OpusOGGError",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "OpusOGGError",
+                        "printedName": "OpusOGG.OpusOGGError",
+                        "usr": "s:7OpusOGG0A8OGGErrorO"
+                      },
+                      {
+                        "kind": "TypeNominal",
+                        "name": "String",
+                        "printedName": "Swift.String",
+                        "usr": "s:SS"
+                      }
+                    ]
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "OpusOGG.OpusOGGError.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "OpusOGGError",
+                        "printedName": "OpusOGG.OpusOGGError",
+                        "usr": "s:7OpusOGG0A8OGGErrorO"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "s:7OpusOGG0A8OGGErrorO20invalidConfigurationyACSScACmF",
+            "mangledName": "$s7OpusOGG0A8OGGErrorO20invalidConfigurationyACSScACmF",
+            "moduleName": "OpusOGG"
+          },
+          {
+            "kind": "Var",
+            "name": "invalidPacket",
+            "printedName": "invalidPacket",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(OpusOGG.OpusOGGError.Type) -> OpusOGG.OpusOGGError",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "OpusOGGError",
+                    "printedName": "OpusOGG.OpusOGGError",
+                    "usr": "s:7OpusOGG0A8OGGErrorO"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "OpusOGG.OpusOGGError.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "OpusOGGError",
+                        "printedName": "OpusOGG.OpusOGGError",
+                        "usr": "s:7OpusOGG0A8OGGErrorO"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "s:7OpusOGG0A8OGGErrorO13invalidPacketyA2CmF",
+            "mangledName": "$s7OpusOGG0A8OGGErrorO13invalidPacketyA2CmF",
+            "moduleName": "OpusOGG"
+          },
+          {
+            "kind": "Var",
+            "name": "streamNotReady",
+            "printedName": "streamNotReady",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(OpusOGG.OpusOGGError.Type) -> OpusOGG.OpusOGGError",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "OpusOGGError",
+                    "printedName": "OpusOGG.OpusOGGError",
+                    "usr": "s:7OpusOGG0A8OGGErrorO"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "OpusOGG.OpusOGGError.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "OpusOGGError",
+                        "printedName": "OpusOGG.OpusOGGError",
+                        "usr": "s:7OpusOGG0A8OGGErrorO"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "s:7OpusOGG0A8OGGErrorO14streamNotReadyyA2CmF",
+            "mangledName": "$s7OpusOGG0A8OGGErrorO14streamNotReadyyA2CmF",
+            "moduleName": "OpusOGG",
+            "declAttributes": [
+              "RawDocComment"
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "missingIdentificationHeaders",
+            "printedName": "missingIdentificationHeaders",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(OpusOGG.OpusOGGError.Type) -> OpusOGG.OpusOGGError",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "OpusOGGError",
+                    "printedName": "OpusOGG.OpusOGGError",
+                    "usr": "s:7OpusOGG0A8OGGErrorO"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "OpusOGG.OpusOGGError.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "OpusOGGError",
+                        "printedName": "OpusOGG.OpusOGGError",
+                        "usr": "s:7OpusOGG0A8OGGErrorO"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "s:7OpusOGG0A8OGGErrorO28missingIdentificationHeadersyA2CmF",
+            "mangledName": "$s7OpusOGG0A8OGGErrorO28missingIdentificationHeadersyA2CmF",
+            "moduleName": "OpusOGG",
+            "declAttributes": [
+              "RawDocComment"
+            ]
+          },
+          {
+            "kind": "Function",
+            "name": "==",
+            "printedName": "==(_:_:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Bool",
+                "printedName": "Swift.Bool",
+                "usr": "s:Sb"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "OpusOGGError",
+                "printedName": "OpusOGG.OpusOGGError",
+                "usr": "s:7OpusOGG0A8OGGErrorO"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "OpusOGGError",
+                "printedName": "OpusOGG.OpusOGGError",
+                "usr": "s:7OpusOGG0A8OGGErrorO"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:7OpusOGG0A8OGGErrorO2eeoiySbAC_ACtFZ",
+            "mangledName": "$s7OpusOGG0A8OGGErrorO2eeoiySbAC_ACtFZ",
+            "moduleName": "OpusOGG",
+            "static": true,
+            "implicit": true,
+            "funcSelfKind": "NonMutating"
+          }
+        ],
+        "declKind": "Enum",
+        "usr": "s:7OpusOGG0A8OGGErrorO",
+        "mangledName": "$s7OpusOGG0A8OGGErrorO",
+        "moduleName": "OpusOGG",
+        "declAttributes": [
+          "AccessControl",
+          "RawDocComment"
+        ],
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Error",
+            "printedName": "Error",
+            "usr": "s:s5ErrorP",
+            "mangledName": "$ss5ErrorP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Equatable",
+            "printedName": "Equatable",
+            "usr": "s:SQ",
+            "mangledName": "$sSQ"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Sendable",
+            "printedName": "Sendable",
+            "usr": "s:s8SendableP",
+            "mangledName": "$ss8SendableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "SendableMetatype",
+            "printedName": "SendableMetatype",
+            "usr": "s:s16SendableMetatypeP",
+            "mangledName": "$ss16SendableMetatypeP"
+          }
+        ]
+      },
+      {
+        "kind": "TypeDecl",
+        "name": "OpusOGGEncoderParameters",
+        "printedName": "OpusOGGEncoderParameters",
+        "children": [
+          {
+            "kind": "Var",
+            "name": "sampleRate",
+            "printedName": "sampleRate",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Int32",
+                "printedName": "Swift.Int32",
+                "usr": "s:s5Int32V"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:7OpusOGG0A20OGGEncoderParametersV10sampleRates5Int32Vvp",
+            "mangledName": "$s7OpusOGG0A20OGGEncoderParametersV10sampleRates5Int32Vvp",
+            "moduleName": "OpusOGG",
+            "declAttributes": [
+              "HasStorage",
+              "AccessControl"
+            ],
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Int32",
+                    "printedName": "Swift.Int32",
+                    "usr": "s:s5Int32V"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:7OpusOGG0A20OGGEncoderParametersV10sampleRates5Int32Vvg",
+                "mangledName": "$s7OpusOGG0A20OGGEncoderParametersV10sampleRates5Int32Vvg",
+                "moduleName": "OpusOGG",
+                "implicit": true,
+                "accessorKind": "get"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Set",
+                "printedName": "Set()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Int32",
+                    "printedName": "Swift.Int32",
+                    "usr": "s:s5Int32V"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:7OpusOGG0A20OGGEncoderParametersV10sampleRates5Int32Vvs",
+                "mangledName": "$s7OpusOGG0A20OGGEncoderParametersV10sampleRates5Int32Vvs",
+                "moduleName": "OpusOGG",
+                "implicit": true,
+                "accessorKind": "set"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Modify",
+                "printedName": "Modify()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:7OpusOGG0A20OGGEncoderParametersV10sampleRates5Int32VvM",
+                "mangledName": "$s7OpusOGG0A20OGGEncoderParametersV10sampleRates5Int32VvM",
+                "moduleName": "OpusOGG",
+                "implicit": true,
+                "accessorKind": "_modify"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "channels",
+            "printedName": "channels",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Int",
+                "printedName": "Swift.Int",
+                "usr": "s:Si"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:7OpusOGG0A20OGGEncoderParametersV8channelsSivp",
+            "mangledName": "$s7OpusOGG0A20OGGEncoderParametersV8channelsSivp",
+            "moduleName": "OpusOGG",
+            "declAttributes": [
+              "HasStorage",
+              "AccessControl"
+            ],
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Int",
+                    "printedName": "Swift.Int",
+                    "usr": "s:Si"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:7OpusOGG0A20OGGEncoderParametersV8channelsSivg",
+                "mangledName": "$s7OpusOGG0A20OGGEncoderParametersV8channelsSivg",
+                "moduleName": "OpusOGG",
+                "implicit": true,
+                "accessorKind": "get"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Set",
+                "printedName": "Set()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Int",
+                    "printedName": "Swift.Int",
+                    "usr": "s:Si"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:7OpusOGG0A20OGGEncoderParametersV8channelsSivs",
+                "mangledName": "$s7OpusOGG0A20OGGEncoderParametersV8channelsSivs",
+                "moduleName": "OpusOGG",
+                "implicit": true,
+                "accessorKind": "set"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Modify",
+                "printedName": "Modify()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:7OpusOGG0A20OGGEncoderParametersV8channelsSivM",
+                "mangledName": "$s7OpusOGG0A20OGGEncoderParametersV8channelsSivM",
+                "moduleName": "OpusOGG",
+                "implicit": true,
+                "accessorKind": "_modify"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "samplesPerFrame",
+            "printedName": "samplesPerFrame",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Int",
+                "printedName": "Swift.Int",
+                "usr": "s:Si"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:7OpusOGG0A20OGGEncoderParametersV15samplesPerFrameSivp",
+            "mangledName": "$s7OpusOGG0A20OGGEncoderParametersV15samplesPerFrameSivp",
+            "moduleName": "OpusOGG",
+            "declAttributes": [
+              "HasStorage",
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Int",
+                    "printedName": "Swift.Int",
+                    "usr": "s:Si"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:7OpusOGG0A20OGGEncoderParametersV15samplesPerFrameSivg",
+                "mangledName": "$s7OpusOGG0A20OGGEncoderParametersV15samplesPerFrameSivg",
+                "moduleName": "OpusOGG",
+                "implicit": true,
+                "accessorKind": "get"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Set",
+                "printedName": "Set()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Int",
+                    "printedName": "Swift.Int",
+                    "usr": "s:Si"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:7OpusOGG0A20OGGEncoderParametersV15samplesPerFrameSivs",
+                "mangledName": "$s7OpusOGG0A20OGGEncoderParametersV15samplesPerFrameSivs",
+                "moduleName": "OpusOGG",
+                "implicit": true,
+                "accessorKind": "set"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Modify",
+                "printedName": "Modify()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:7OpusOGG0A20OGGEncoderParametersV15samplesPerFrameSivM",
+                "mangledName": "$s7OpusOGG0A20OGGEncoderParametersV15samplesPerFrameSivM",
+                "moduleName": "OpusOGG",
+                "implicit": true,
+                "accessorKind": "_modify"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "bitrate",
+            "printedName": "bitrate",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Int32",
+                "printedName": "Swift.Int32",
+                "usr": "s:s5Int32V"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:7OpusOGG0A20OGGEncoderParametersV7bitrates5Int32Vvp",
+            "mangledName": "$s7OpusOGG0A20OGGEncoderParametersV7bitrates5Int32Vvp",
+            "moduleName": "OpusOGG",
+            "declAttributes": [
+              "HasStorage",
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Int32",
+                    "printedName": "Swift.Int32",
+                    "usr": "s:s5Int32V"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:7OpusOGG0A20OGGEncoderParametersV7bitrates5Int32Vvg",
+                "mangledName": "$s7OpusOGG0A20OGGEncoderParametersV7bitrates5Int32Vvg",
+                "moduleName": "OpusOGG",
+                "implicit": true,
+                "accessorKind": "get"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Set",
+                "printedName": "Set()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Int32",
+                    "printedName": "Swift.Int32",
+                    "usr": "s:s5Int32V"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:7OpusOGG0A20OGGEncoderParametersV7bitrates5Int32Vvs",
+                "mangledName": "$s7OpusOGG0A20OGGEncoderParametersV7bitrates5Int32Vvs",
+                "moduleName": "OpusOGG",
+                "implicit": true,
+                "accessorKind": "set"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Modify",
+                "printedName": "Modify()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:7OpusOGG0A20OGGEncoderParametersV7bitrates5Int32VvM",
+                "mangledName": "$s7OpusOGG0A20OGGEncoderParametersV7bitrates5Int32VvM",
+                "moduleName": "OpusOGG",
+                "implicit": true,
+                "accessorKind": "_modify"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "application",
+            "printedName": "application",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Int32",
+                "printedName": "Swift.Int32",
+                "usr": "s:s5Int32V"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:7OpusOGG0A20OGGEncoderParametersV11applications5Int32Vvp",
+            "mangledName": "$s7OpusOGG0A20OGGEncoderParametersV11applications5Int32Vvp",
+            "moduleName": "OpusOGG",
+            "declAttributes": [
+              "HasStorage",
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Int32",
+                    "printedName": "Swift.Int32",
+                    "usr": "s:s5Int32V"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:7OpusOGG0A20OGGEncoderParametersV11applications5Int32Vvg",
+                "mangledName": "$s7OpusOGG0A20OGGEncoderParametersV11applications5Int32Vvg",
+                "moduleName": "OpusOGG",
+                "implicit": true,
+                "accessorKind": "get"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Set",
+                "printedName": "Set()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Int32",
+                    "printedName": "Swift.Int32",
+                    "usr": "s:s5Int32V"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:7OpusOGG0A20OGGEncoderParametersV11applications5Int32Vvs",
+                "mangledName": "$s7OpusOGG0A20OGGEncoderParametersV11applications5Int32Vvs",
+                "moduleName": "OpusOGG",
+                "implicit": true,
+                "accessorKind": "set"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Modify",
+                "printedName": "Modify()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:7OpusOGG0A20OGGEncoderParametersV11applications5Int32VvM",
+                "mangledName": "$s7OpusOGG0A20OGGEncoderParametersV11applications5Int32VvM",
+                "moduleName": "OpusOGG",
+                "implicit": true,
+                "accessorKind": "_modify"
+              }
+            ]
+          },
+          {
+            "kind": "Constructor",
+            "name": "init",
+            "printedName": "init(sampleRate:channels:samplesPerFrame:bitrate:application:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "OpusOGGEncoderParameters",
+                "printedName": "OpusOGG.OpusOGGEncoderParameters",
+                "usr": "s:7OpusOGG0A20OGGEncoderParametersV"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Int32",
+                "printedName": "Swift.Int32",
+                "hasDefaultArg": true,
+                "usr": "s:s5Int32V"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Int",
+                "printedName": "Swift.Int",
+                "hasDefaultArg": true,
+                "usr": "s:Si"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Int",
+                "printedName": "Swift.Int",
+                "hasDefaultArg": true,
+                "usr": "s:Si"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Int32",
+                "printedName": "Swift.Int32",
+                "hasDefaultArg": true,
+                "usr": "s:s5Int32V"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Int32",
+                "printedName": "Swift.Int32",
+                "hasDefaultArg": true,
+                "usr": "s:s5Int32V"
+              }
+            ],
+            "declKind": "Constructor",
+            "usr": "s:7OpusOGG0A20OGGEncoderParametersV10sampleRate8channels15samplesPerFrame7bitrate11applicationACs5Int32V_S2iA2Jtcfc",
+            "mangledName": "$s7OpusOGG0A20OGGEncoderParametersV10sampleRate8channels15samplesPerFrame7bitrate11applicationACs5Int32V_S2iA2Jtcfc",
+            "moduleName": "OpusOGG",
+            "declAttributes": [
+              "AccessControl"
+            ],
+            "init_kind": "Designated"
+          }
+        ],
+        "declKind": "Struct",
+        "usr": "s:7OpusOGG0A20OGGEncoderParametersV",
+        "mangledName": "$s7OpusOGG0A20OGGEncoderParametersV",
+        "moduleName": "OpusOGG",
+        "declAttributes": [
+          "AccessControl",
+          "RawDocComment"
+        ],
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Sendable",
+            "printedName": "Sendable",
+            "usr": "s:s8SendableP",
+            "mangledName": "$ss8SendableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "SendableMetatype",
+            "printedName": "SendableMetatype",
+            "usr": "s:s16SendableMetatypeP",
+            "mangledName": "$ss16SendableMetatypeP"
+          }
+        ]
+      },
+      {
+        "kind": "TypeDecl",
+        "name": "OpusOGGEncodedPage",
+        "printedName": "OpusOGGEncodedPage",
+        "children": [
+          {
+            "kind": "Var",
+            "name": "data",
+            "printedName": "data",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Data",
+                "printedName": "Foundation.Data",
+                "usr": "s:10Foundation4DataV"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:7OpusOGG0A14OGGEncodedPageV4data10Foundation4DataVvp",
+            "mangledName": "$s7OpusOGG0A14OGGEncodedPageV4data10Foundation4DataVvp",
+            "moduleName": "OpusOGG",
+            "declAttributes": [
+              "HasStorage",
+              "AccessControl"
+            ],
+            "isLet": true,
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Data",
+                    "printedName": "Foundation.Data",
+                    "usr": "s:10Foundation4DataV"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:7OpusOGG0A14OGGEncodedPageV4data10Foundation4DataVvg",
+                "mangledName": "$s7OpusOGG0A14OGGEncodedPageV4data10Foundation4DataVvg",
+                "moduleName": "OpusOGG",
+                "implicit": true,
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Constructor",
+            "name": "init",
+            "printedName": "init(data:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "OpusOGGEncodedPage",
+                "printedName": "OpusOGG.OpusOGGEncodedPage",
+                "usr": "s:7OpusOGG0A14OGGEncodedPageV"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Data",
+                "printedName": "Foundation.Data",
+                "usr": "s:10Foundation4DataV"
+              }
+            ],
+            "declKind": "Constructor",
+            "usr": "s:7OpusOGG0A14OGGEncodedPageV4dataAC10Foundation4DataV_tcfc",
+            "mangledName": "$s7OpusOGG0A14OGGEncodedPageV4dataAC10Foundation4DataV_tcfc",
+            "moduleName": "OpusOGG",
+            "declAttributes": [
+              "AccessControl"
+            ],
+            "init_kind": "Designated"
+          },
+          {
+            "kind": "Function",
+            "name": "==",
+            "printedName": "==(_:_:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Bool",
+                "printedName": "Swift.Bool",
+                "usr": "s:Sb"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "OpusOGGEncodedPage",
+                "printedName": "OpusOGG.OpusOGGEncodedPage",
+                "usr": "s:7OpusOGG0A14OGGEncodedPageV"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "OpusOGGEncodedPage",
+                "printedName": "OpusOGG.OpusOGGEncodedPage",
+                "usr": "s:7OpusOGG0A14OGGEncodedPageV"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:7OpusOGG0A14OGGEncodedPageV2eeoiySbAC_ACtFZ",
+            "mangledName": "$s7OpusOGG0A14OGGEncodedPageV2eeoiySbAC_ACtFZ",
+            "moduleName": "OpusOGG",
+            "static": true,
+            "implicit": true,
+            "funcSelfKind": "NonMutating"
+          }
+        ],
+        "declKind": "Struct",
+        "usr": "s:7OpusOGG0A14OGGEncodedPageV",
+        "mangledName": "$s7OpusOGG0A14OGGEncodedPageV",
+        "moduleName": "OpusOGG",
+        "declAttributes": [
+          "AccessControl",
+          "RawDocComment"
+        ],
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Equatable",
+            "printedName": "Equatable",
+            "usr": "s:SQ",
+            "mangledName": "$sSQ"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Sendable",
+            "printedName": "Sendable",
+            "usr": "s:s8SendableP",
+            "mangledName": "$ss8SendableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "SendableMetatype",
+            "printedName": "SendableMetatype",
+            "usr": "s:s16SendableMetatypeP",
+            "mangledName": "$ss16SendableMetatypeP"
+          }
+        ]
+      },
+      {
+        "kind": "TypeDecl",
+        "name": "OpusOGGDecodedPCM",
+        "printedName": "OpusOGGDecodedPCM",
+        "children": [
+          {
+            "kind": "Var",
+            "name": "data",
+            "printedName": "data",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Data",
+                "printedName": "Foundation.Data",
+                "usr": "s:10Foundation4DataV"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:7OpusOGG0A13OGGDecodedPCMV4data10Foundation4DataVvp",
+            "mangledName": "$s7OpusOGG0A13OGGDecodedPCMV4data10Foundation4DataVvp",
+            "moduleName": "OpusOGG",
+            "declAttributes": [
+              "HasStorage",
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "isLet": true,
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Data",
+                    "printedName": "Foundation.Data",
+                    "usr": "s:10Foundation4DataV"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:7OpusOGG0A13OGGDecodedPCMV4data10Foundation4DataVvg",
+                "mangledName": "$s7OpusOGG0A13OGGDecodedPCMV4data10Foundation4DataVvg",
+                "moduleName": "OpusOGG",
+                "implicit": true,
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "channels",
+            "printedName": "channels",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Int",
+                "printedName": "Swift.Int",
+                "usr": "s:Si"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:7OpusOGG0A13OGGDecodedPCMV8channelsSivp",
+            "mangledName": "$s7OpusOGG0A13OGGDecodedPCMV8channelsSivp",
+            "moduleName": "OpusOGG",
+            "declAttributes": [
+              "HasStorage",
+              "AccessControl"
+            ],
+            "isLet": true,
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Int",
+                    "printedName": "Swift.Int",
+                    "usr": "s:Si"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:7OpusOGG0A13OGGDecodedPCMV8channelsSivg",
+                "mangledName": "$s7OpusOGG0A13OGGDecodedPCMV8channelsSivg",
+                "moduleName": "OpusOGG",
+                "implicit": true,
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "sampleRate",
+            "printedName": "sampleRate",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Int32",
+                "printedName": "Swift.Int32",
+                "usr": "s:s5Int32V"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:7OpusOGG0A13OGGDecodedPCMV10sampleRates5Int32Vvp",
+            "mangledName": "$s7OpusOGG0A13OGGDecodedPCMV10sampleRates5Int32Vvp",
+            "moduleName": "OpusOGG",
+            "declAttributes": [
+              "HasStorage",
+              "AccessControl"
+            ],
+            "isLet": true,
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Int32",
+                    "printedName": "Swift.Int32",
+                    "usr": "s:s5Int32V"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:7OpusOGG0A13OGGDecodedPCMV10sampleRates5Int32Vvg",
+                "mangledName": "$s7OpusOGG0A13OGGDecodedPCMV10sampleRates5Int32Vvg",
+                "moduleName": "OpusOGG",
+                "implicit": true,
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Constructor",
+            "name": "init",
+            "printedName": "init(data:channels:sampleRate:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "OpusOGGDecodedPCM",
+                "printedName": "OpusOGG.OpusOGGDecodedPCM",
+                "usr": "s:7OpusOGG0A13OGGDecodedPCMV"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Data",
+                "printedName": "Foundation.Data",
+                "usr": "s:10Foundation4DataV"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Int",
+                "printedName": "Swift.Int",
+                "usr": "s:Si"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Int32",
+                "printedName": "Swift.Int32",
+                "usr": "s:s5Int32V"
+              }
+            ],
+            "declKind": "Constructor",
+            "usr": "s:7OpusOGG0A13OGGDecodedPCMV4data8channels10sampleRateAC10Foundation4DataV_Sis5Int32Vtcfc",
+            "mangledName": "$s7OpusOGG0A13OGGDecodedPCMV4data8channels10sampleRateAC10Foundation4DataV_Sis5Int32Vtcfc",
+            "moduleName": "OpusOGG",
+            "declAttributes": [
+              "AccessControl"
+            ],
+            "init_kind": "Designated"
+          },
+          {
+            "kind": "Function",
+            "name": "==",
+            "printedName": "==(_:_:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Bool",
+                "printedName": "Swift.Bool",
+                "usr": "s:Sb"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "OpusOGGDecodedPCM",
+                "printedName": "OpusOGG.OpusOGGDecodedPCM",
+                "usr": "s:7OpusOGG0A13OGGDecodedPCMV"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "OpusOGGDecodedPCM",
+                "printedName": "OpusOGG.OpusOGGDecodedPCM",
+                "usr": "s:7OpusOGG0A13OGGDecodedPCMV"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:7OpusOGG0A13OGGDecodedPCMV2eeoiySbAC_ACtFZ",
+            "mangledName": "$s7OpusOGG0A13OGGDecodedPCMV2eeoiySbAC_ACtFZ",
+            "moduleName": "OpusOGG",
+            "static": true,
+            "implicit": true,
+            "funcSelfKind": "NonMutating"
+          }
+        ],
+        "declKind": "Struct",
+        "usr": "s:7OpusOGG0A13OGGDecodedPCMV",
+        "mangledName": "$s7OpusOGG0A13OGGDecodedPCMV",
+        "moduleName": "OpusOGG",
+        "declAttributes": [
+          "AccessControl",
+          "RawDocComment"
+        ],
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Equatable",
+            "printedName": "Equatable",
+            "usr": "s:SQ",
+            "mangledName": "$sSQ"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Sendable",
+            "printedName": "Sendable",
+            "usr": "s:s8SendableP",
+            "mangledName": "$ss8SendableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "SendableMetatype",
+            "printedName": "SendableMetatype",
+            "usr": "s:s16SendableMetatypeP",
+            "mangledName": "$ss16SendableMetatypeP"
+          }
+        ]
+      }
+    ],
+    "json_format_version": 8
+  },
+  "ConstValues": [
+    {
+      "filePath": "\/Users\/xiaoqiang.a.shen\/Developer\/Projects\/OpusOGGContainer\/OpusOGG\/OpusOGGDecoder.swift",
+      "kind": "StringLiteral",
+      "offset": 793,
+      "length": 26,
+      "value": "\"com.isxq.OpusOGG.decoder\""
+    },
+    {
+      "filePath": "\/Users\/xiaoqiang.a.shen\/Developer\/Projects\/OpusOGGContainer\/OpusOGG\/OpusOGGDecoder.swift",
+      "kind": "BooleanLiteral",
+      "offset": 947,
+      "length": 5,
+      "value": "false"
+    },
+    {
+      "filePath": "\/Users\/xiaoqiang.a.shen\/Developer\/Projects\/OpusOGGContainer\/OpusOGG\/OpusOGGDecoder.swift",
+      "kind": "IntegerLiteral",
+      "offset": 1020,
+      "length": 1,
+      "value": "1"
+    },
+    {
+      "filePath": "\/Users\/xiaoqiang.a.shen\/Developer\/Projects\/OpusOGGContainer\/OpusOGG\/OpusOGGDecoder.swift",
+      "kind": "IntegerLiteral",
+      "offset": 1065,
+      "length": 6,
+      "value": "48000"
+    },
+    {
+      "filePath": "\/Users\/xiaoqiang.a.shen\/Developer\/Projects\/OpusOGGContainer\/OpusOGG\/OpusOGGDecoder.swift",
+      "kind": "IntegerLiteral",
+      "offset": 1114,
+      "length": 1,
+      "value": "0"
+    },
+    {
+      "filePath": "\/Users\/xiaoqiang.a.shen\/Developer\/Projects\/OpusOGGContainer\/OpusOGG\/OpusOGGDecoder.swift",
+      "kind": "IntegerLiteral",
+      "offset": 1200,
+      "length": 12,
+      "value": "1"
+    },
+    {
+      "filePath": "\/Users\/xiaoqiang.a.shen\/Developer\/Projects\/OpusOGGContainer\/OpusOGG\/OpusOGGDecoder.swift",
+      "kind": "IntegerLiteral",
+      "offset": 1226,
+      "length": 5,
+      "value": "2"
+    },
+    {
+      "filePath": "\/Users\/xiaoqiang.a.shen\/Developer\/Projects\/OpusOGGContainer\/OpusOGG\/OpusOGGDecoder.swift",
+      "kind": "Array",
+      "offset": 2661,
+      "length": 48,
+      "value": "[0x4F, 0x70, 0x75, 0x73, 0x48, 0x65, 0x61, 0x64]"
+    },
+    {
+      "filePath": "\/Users\/xiaoqiang.a.shen\/Developer\/Projects\/OpusOGGContainer\/OpusOGG\/OpusOGGDecoder.swift",
+      "kind": "Array",
+      "offset": 2769,
+      "length": 48,
+      "value": "[0x4F, 0x70, 0x75, 0x73, 0x54, 0x61, 0x67, 0x73]"
+    },
+    {
+      "filePath": "\/Users\/xiaoqiang.a.shen\/Developer\/Projects\/OpusOGGContainer\/OpusOGG\/OpusOGGEncoder.swift",
+      "kind": "StringLiteral",
+      "offset": 807,
+      "length": 26,
+      "value": "\"com.isxq.OpusOGG.encoder\""
+    },
+    {
+      "filePath": "\/Users\/xiaoqiang.a.shen\/Developer\/Projects\/OpusOGGContainer\/OpusOGG\/OpusOGGEncoder.swift",
+      "kind": "IntegerLiteral",
+      "offset": 1004,
+      "length": 1,
+      "value": "0"
+    },
+    {
+      "filePath": "\/Users\/xiaoqiang.a.shen\/Developer\/Projects\/OpusOGGContainer\/OpusOGG\/OpusOGGEncoder.swift",
+      "kind": "IntegerLiteral",
+      "offset": 1054,
+      "length": 1,
+      "value": "0"
+    },
+    {
+      "filePath": "\/Users\/xiaoqiang.a.shen\/Developer\/Projects\/OpusOGGContainer\/OpusOGG\/OpusOGGEncoder.swift",
+      "kind": "BooleanLiteral",
+      "offset": 1083,
+      "length": 5,
+      "value": "false"
+    },
+    {
+      "filePath": "\/Users\/xiaoqiang.a.shen\/Developer\/Projects\/OpusOGGContainer\/OpusOGG\/OpusOGGEncoder.swift",
+      "kind": "Array",
+      "offset": 1481,
+      "length": 2,
+      "value": "[]"
+    },
+    {
+      "filePath": "\/Users\/xiaoqiang.a.shen\/Developer\/Projects\/OpusOGGContainer\/OpusOGG\/OpusOGGTypes.swift",
+      "kind": "IntegerLiteral",
+      "offset": 1205,
+      "length": 6,
+      "value": "48000"
+    },
+    {
+      "filePath": "\/Users\/xiaoqiang.a.shen\/Developer\/Projects\/OpusOGGContainer\/OpusOGG\/OpusOGGTypes.swift",
+      "kind": "IntegerLiteral",
+      "offset": 1237,
+      "length": 1,
+      "value": "1"
+    },
+    {
+      "filePath": "\/Users\/xiaoqiang.a.shen\/Developer\/Projects\/OpusOGGContainer\/OpusOGG\/OpusOGGTypes.swift",
+      "kind": "IntegerLiteral",
+      "offset": 1271,
+      "length": 3,
+      "value": "960"
+    },
+    {
+      "filePath": "\/Users\/xiaoqiang.a.shen\/Developer\/Projects\/OpusOGGContainer\/OpusOGG\/OpusOGGTypes.swift",
+      "kind": "IntegerLiteral",
+      "offset": 1301,
+      "length": 6,
+      "value": "64000"
+    },
+    {
+      "filePath": "\/Users\/xiaoqiang.a.shen\/Developer\/Projects\/OpusOGGContainer\/OpusOGG\/OpusOGGTypes.swift",
+      "kind": "IntegerLiteral",
+      "offset": 1338,
+      "length": 4,
+      "value": "2049"
+    }
+  ]
+}

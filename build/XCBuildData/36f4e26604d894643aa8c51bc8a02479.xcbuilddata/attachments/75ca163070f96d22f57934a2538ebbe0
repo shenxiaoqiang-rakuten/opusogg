@@ -1,0 +1,19 @@
+{
+  "" : {
+    "diagnostics" : "/Users/xiaoqiang.a.shen/Developer/Projects/OpusOGGContainer/build/OpusOGGContainer.build/Debug-iphoneos/OpusOGG.build/Objects-normal/arm64/OpusOGG-primary.dia",
+    "emit-module-dependencies" : "/Users/xiaoqiang.a.shen/Developer/Projects/OpusOGGContainer/build/OpusOGGContainer.build/Debug-iphoneos/OpusOGG.build/Objects-normal/arm64/OpusOGG-primary-emit-module.d",
+    "emit-module-diagnostics" : "/Users/xiaoqiang.a.shen/Developer/Projects/OpusOGGContainer/build/OpusOGGContainer.build/Debug-iphoneos/OpusOGG.build/Objects-normal/arm64/OpusOGG-primary-emit-module.dia",
+    "pch" : "/Users/xiaoqiang.a.shen/Developer/Projects/OpusOGGContainer/build/OpusOGGContainer.build/Debug-iphoneos/OpusOGG.build/Objects-normal/arm64/OpusOGG-primary-Bridging-header.pch",
+    "swift-dependencies" : "/Users/xiaoqiang.a.shen/Developer/Projects/OpusOGGContainer/build/OpusOGGContainer.build/Debug-iphoneos/OpusOGG.build/Objects-normal/arm64/OpusOGG-primary.swiftdeps"
+  },
+  "/Users/xiaoqiang.a.shen/Developer/Projects/OpusOGGContainer/OpusOGG/OpusOGG.swift" : {
+    "const-values" : "/Users/xiaoqiang.a.shen/Developer/Projects/OpusOGGContainer/build/OpusOGGContainer.build/Debug-iphoneos/OpusOGG.build/Objects-normal/arm64/OpusOGG-d0957f3fce72d95ca854f45cd94116cd.swiftconstvalues",
+    "dependencies" : "/Users/xiaoqiang.a.shen/Developer/Projects/OpusOGGContainer/build/OpusOGGContainer.build/Debug-iphoneos/OpusOGG.build/Objects-normal/arm64/OpusOGG-d0957f3fce72d95ca854f45cd94116cd.d",
+    "diagnostics" : "/Users/xiaoqiang.a.shen/Developer/Projects/OpusOGGContainer/build/OpusOGGContainer.build/Debug-iphoneos/OpusOGG.build/Objects-normal/arm64/OpusOGG-d0957f3fce72d95ca854f45cd94116cd.dia",
+    "index-unit-output-path" : "/OpusOGGContainer.build/Debug-iphoneos/OpusOGG.build/Objects-normal/arm64/OpusOGG-d0957f3fce72d95ca854f45cd94116cd.o",
+    "llvm-bc" : "/Users/xiaoqiang.a.shen/Developer/Projects/OpusOGGContainer/build/OpusOGGContainer.build/Debug-iphoneos/OpusOGG.build/Objects-normal/arm64/OpusOGG-d0957f3fce72d95ca854f45cd94116cd.bc",
+    "object" : "/Users/xiaoqiang.a.shen/Developer/Projects/OpusOGGContainer/build/OpusOGGContainer.build/Debug-iphoneos/OpusOGG.build/Objects-normal/arm64/OpusOGG-d0957f3fce72d95ca854f45cd94116cd.o",
+    "swift-dependencies" : "/Users/xiaoqiang.a.shen/Developer/Projects/OpusOGGContainer/build/OpusOGGContainer.build/Debug-iphoneos/OpusOGG.build/Objects-normal/arm64/OpusOGG-d0957f3fce72d95ca854f45cd94116cd.swiftdeps",
+    "swiftmodule" : "/Users/xiaoqiang.a.shen/Developer/Projects/OpusOGGContainer/build/OpusOGGContainer.build/Debug-iphoneos/OpusOGG.build/Objects-normal/arm64/OpusOGG-d0957f3fce72d95ca854f45cd94116cd~partial.swiftmodule"
+  }
+}

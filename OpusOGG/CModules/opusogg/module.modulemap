@@ -1,0 +1,5 @@
+/// C surface for Swift: libopus + libogg + small helpers. Built with -I to OpusOGG/CHeaders.
+module opusogg {
+    umbrella header "opusogg_umbrella.h"
+    export *
+}

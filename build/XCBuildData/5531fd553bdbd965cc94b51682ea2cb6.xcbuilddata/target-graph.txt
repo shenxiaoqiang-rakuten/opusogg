@@ -1,0 +1,4 @@
+Target dependency graph (2 targets)
+Target 'OpusOGG' in project 'OpusOGGContainer'
+➜ Explicit dependency on target 'BuildOpusOggXCFrameworks' in project 'OpusOGGContainer'
+Target 'BuildOpusOggXCFrameworks' in project 'OpusOGGContainer' (no dependencies)

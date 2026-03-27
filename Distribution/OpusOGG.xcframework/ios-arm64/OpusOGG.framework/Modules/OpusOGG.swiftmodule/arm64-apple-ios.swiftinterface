@@ -1,0 +1,58 @@
+// swift-interface-format-version: 1.0
+// swift-compiler-version: Apple Swift version 6.2.4 effective-5.10 (swiftlang-6.2.4.1.4 clang-1700.6.4.2)
+// swift-module-flags: -target arm64-apple-ios17.6 -enable-objc-interop -enable-library-evolution -swift-version 5 -enforce-exclusivity=checked -O -enable-experimental-feature DebugDescriptionMacro -enable-bare-slash-regex -module-name OpusOGG
+// swift-module-flags-ignorable:  -formal-cxx-interoperability-mode=off -interface-compiler-version 6.2.4
+import Combine
+import Darwin
+import Foundation
+import Swift
+import _Concurrency
+import _StringProcessing
+import _SwiftConcurrencyShims
+final public class OpusOGGDecoder : @unchecked Swift.Sendable {
+  final public var publisher: Combine.AnyPublisher<OpusOGG.OpusOGGDecodedPCM, OpusOGG.OpusOGGError> {
+    get
+  }
+  public init()
+  @objc deinit
+  final public func appendOggBytes(_ data: Foundation.Data)
+  final public func finish()
+}
+final public class OpusOGGEncoder : @unchecked Swift.Sendable {
+  final public var publisher: Combine.AnyPublisher<OpusOGG.OpusOGGEncodedPage, OpusOGG.OpusOGGError> {
+    get
+  }
+  public init(parameters: OpusOGG.OpusOGGEncoderParameters) throws
+  @objc deinit
+  final public func appendPCM(_ pcm: Foundation.Data)
+  final public func finish()
+}
+public enum OpusOGGError : Swift.Error, Swift.Equatable, Swift.Sendable {
+  case opusFailed(Swift.Int32)
+  case oggFailed
+  case invalidConfiguration(Swift.String)
+  case invalidPacket
+  case streamNotReady
+  case missingIdentificationHeaders
+  public static func == (a: OpusOGG.OpusOGGError, b: OpusOGG.OpusOGGError) -> Swift.Bool
+}
+public struct OpusOGGEncoderParameters : Swift.Sendable {
+  public var sampleRate: Swift.Int32
+  public var channels: Swift.Int
+  public var samplesPerFrame: Swift.Int
+  public var bitrate: Swift.Int32
+  public var application: Swift.Int32
+  public init(sampleRate: Swift.Int32 = 48_000, channels: Swift.Int = 1, samplesPerFrame: Swift.Int = 960, bitrate: Swift.Int32 = 64_000, application: Swift.Int32 = 2049)
+}
+public struct OpusOGGEncodedPage : Swift.Equatable, Swift.Sendable {
+  public let data: Foundation.Data
+  public init(data: Foundation.Data)
+  public static func == (a: OpusOGG.OpusOGGEncodedPage, b: OpusOGG.OpusOGGEncodedPage) -> Swift.Bool
+}
+public struct OpusOGGDecodedPCM : Swift.Equatable, Swift.Sendable {
+  public let data: Foundation.Data
+  public let channels: Swift.Int
+  public let sampleRate: Swift.Int32
+  public init(data: Foundation.Data, channels: Swift.Int, sampleRate: Swift.Int32)
+  public static func == (a: OpusOGG.OpusOGGDecodedPCM, b: OpusOGG.OpusOGGDecodedPCM) -> Swift.Bool
+}

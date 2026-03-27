@@ -1,0 +1,15 @@
+{
+  "originHash" : "7721e7ebae7c95c0a397b2415402a30cbfd86d310f38298272919d7fe8a653be",
+  "pins" : [
+    {
+      "identity" : "voiceaudiokit",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/shenxiaoqiang-rakuten/VoiceAudioKit",
+      "state" : {
+        "revision" : "d1cbeda4b2985494e44cda41d33e3bced17ce860",
+        "version" : "0.1.1"
+      }
+    }
+  ],
+  "version" : 3
+}
