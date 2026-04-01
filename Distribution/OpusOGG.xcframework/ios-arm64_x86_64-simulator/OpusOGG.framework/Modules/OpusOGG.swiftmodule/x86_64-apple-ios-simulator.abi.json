@@ -1832,35 +1832,35 @@
     {
       "filePath": "\/Users\/xiaoqiang.a.shen\/Developer\/Projects\/OpusOGGContainer\/OpusOGG\/OpusOGGEncoder.swift",
       "kind": "StringLiteral",
-      "offset": 807,
+      "offset": 917,
       "length": 26,
       "value": "\"com.isxq.OpusOGG.encoder\""
     },
     {
       "filePath": "\/Users\/xiaoqiang.a.shen\/Developer\/Projects\/OpusOGGContainer\/OpusOGG\/OpusOGGEncoder.swift",
       "kind": "IntegerLiteral",
-      "offset": 1004,
+      "offset": 1114,
       "length": 1,
       "value": "0"
     },
     {
       "filePath": "\/Users\/xiaoqiang.a.shen\/Developer\/Projects\/OpusOGGContainer\/OpusOGG\/OpusOGGEncoder.swift",
       "kind": "IntegerLiteral",
-      "offset": 1054,
+      "offset": 1164,
       "length": 1,
       "value": "0"
     },
     {
       "filePath": "\/Users\/xiaoqiang.a.shen\/Developer\/Projects\/OpusOGGContainer\/OpusOGG\/OpusOGGEncoder.swift",
       "kind": "BooleanLiteral",
-      "offset": 1083,
+      "offset": 1193,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/xiaoqiang.a.shen\/Developer\/Projects\/OpusOGGContainer\/OpusOGG\/OpusOGGEncoder.swift",
       "kind": "Array",
-      "offset": 1481,
+      "offset": 1647,
       "length": 2,
       "value": "[]"
     },

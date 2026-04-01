@@ -10,6 +10,10 @@ import Foundation
 
 /// PCM (Int16) → Opus → Ogg pages. Output is a shared Combine publisher (`multicast` + `autoconnect`).
 public final class OpusOGGEncoder: @unchecked Sendable {
+    private struct PendingAudioPacket {
+        let data: Data
+        let granulePosition: ogg_int64_t
+    }
 
     private let relay = PassthroughSubject<OpusOGGEncodedPage, OpusOGGError>()
     private lazy var multicastPublisher: AnyPublisher<OpusOGGEncodedPage, OpusOGGError> = {
@@ -29,6 +33,7 @@ public final class OpusOGGEncoder: @unchecked Sendable {
     private var granulePosition: ogg_int64_t = 0
     private var nextPacketNumber: ogg_int64_t = 0
     private var finished = false
+    private var pendingAudioPacket: PendingAudioPacket?
 
     private let parameters: OpusOGGEncoderParameters
     private let bytesPerFrame: Int
@@ -103,9 +108,15 @@ public final class OpusOGGEncoder: @unchecked Sendable {
         queue.sync { [weak self] in
             guard let self, !self.finished else { return }
             self.finished = true
-            self.padAndEncodeTail()
-            self.flushRemainingPages(endOfStream: true)
-            self.relay.send(completion: .finished)
+            do {
+                try self.padAndEncodeTail()
+                try self.flushRemainingPages(endOfStream: true)
+                self.relay.send(completion: .finished)
+            } catch let error as OpusOGGError {
+                self.relay.send(completion: .failure(error))
+            } catch {
+                self.relay.send(completion: .failure(.invalidConfiguration(String(describing: error))))
+            }
         }
     }
 
@@ -143,19 +154,13 @@ public final class OpusOGGEncoder: @unchecked Sendable {
         }
     }
 
-    private func padAndEncodeTail() {
+    private func padAndEncodeTail() throws {
         guard !pcmBuffer.isEmpty else {
             return
         }
         pcmBuffer.append(Data(count: bytesPerFrame - pcmBuffer.count))
-        do {
-            try encodeOneFrame(pcmBuffer)
-            pcmBuffer.removeAll(keepingCapacity: true)
-        } catch let error as OpusOGGError {
-            relay.send(completion: .failure(error))
-        } catch {
-            relay.send(completion: .failure(.invalidConfiguration(String(describing: error))))
-        }
+        defer { pcmBuffer.removeAll(keepingCapacity: true) }
+        try encodeOneFrame(pcmBuffer)
     }
 
     private func encodeOneFrame(_ frame: Data) throws {
@@ -168,9 +173,8 @@ public final class OpusOGGEncoder: @unchecked Sendable {
         guard encoded >= 0 else {
             throw OpusOGGError.opusFailed(encoded)
         }
-        if encoded <= 2 {
-            granulePosition += ogg_int64_t(parameters.samplesPerFrame)
-            return
+        guard encoded > 0 else {
+            throw OpusOGGError.invalidPacket
         }
         let packetData = Data(out.prefix(Int(encoded)))
         let nb = packetData.withUnsafeBytes { raw in
@@ -183,22 +187,40 @@ public final class OpusOGGEncoder: @unchecked Sendable {
         guard nb > 0 else {
             throw OpusOGGError.invalidPacket
         }
-        granulePosition += ogg_int64_t(nb)
-        try submitPacket(packetData, packetNumber: nextPacketNumber, granulepos: granulePosition, beginOfStream: false, endOfStream: false)
-        nextPacketNumber += 1
-        drainPages(flush: false, bufferOnly: false)
+        granulePosition += granulePositionDelta(decodedSamples: nb)
+        try queueAudioPacket(packetData, granulepos: granulePosition)
     }
 
-    private func flushRemainingPages(endOfStream: Bool) {
-        if endOfStream {
-            var op = ogg_packet()
-            op.packet = nil
-            op.bytes = 0
-            op.b_o_s = 0
-            op.e_o_s = 1
-            op.granulepos = granulePosition
-            op.packetno = nextPacketNumber
-            _ = ogg_stream_packetin(&oggStream, &op)
+    private func granulePositionDelta(decodedSamples: Int32) -> ogg_int64_t {
+        ogg_int64_t(decodedSamples) * 48_000 / ogg_int64_t(parameters.sampleRate)
+    }
+
+    private func queueAudioPacket(_ data: Data, granulepos: ogg_int64_t) throws {
+        if let pendingAudioPacket {
+            try submitPacket(
+                pendingAudioPacket.data,
+                packetNumber: nextPacketNumber,
+                granulepos: pendingAudioPacket.granulePosition,
+                beginOfStream: false,
+                endOfStream: false
+            )
+            nextPacketNumber += 1
+            drainPages(flush: false, bufferOnly: false)
+        }
+        pendingAudioPacket = PendingAudioPacket(data: data, granulePosition: granulepos)
+    }
+
+    private func flushRemainingPages(endOfStream: Bool) throws {
+        if endOfStream, let pendingAudioPacket {
+            try submitPacket(
+                pendingAudioPacket.data,
+                packetNumber: nextPacketNumber,
+                granulepos: pendingAudioPacket.granulePosition,
+                beginOfStream: false,
+                endOfStream: true
+            )
+            nextPacketNumber += 1
+            self.pendingAudioPacket = nil
         }
         drainPages(flush: true, bufferOnly: false)
     }

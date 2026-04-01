@@ -80,6 +80,44 @@ final class OpusOGGRoundTripTests: XCTestCase {
         }
     }
 
+    func test16kHzEncodingUses48kGranuleClockAndMarksLastPageEOS() throws {
+        let sampleRate: Int32 = 16_000
+        let samplesPerFrame = 320
+        let frameCount = 3
+
+        let encoder = try OpusOGGEncoder(
+            parameters: OpusOGGEncoderParameters(
+                sampleRate: sampleRate,
+                channels: 1,
+                samplesPerFrame: samplesPerFrame
+            )
+        )
+
+        var ogg = Data()
+        let done = expectation(description: "encode complete")
+        var sub: AnyCancellable?
+        sub = encoder.publisher.sink(
+            receiveCompletion: { _ in done.fulfill() },
+            receiveValue: { ogg.append($0.data) }
+        )
+
+        for frameIndex in 0 ..< frameCount {
+            encoder.appendPCM(makeToneFrame(samplesPerFrame: samplesPerFrame, sampleRate: Int(sampleRate), frameIndex: frameIndex))
+        }
+        encoder.finish()
+
+        wait(for: [done], timeout: 10)
+        sub?.cancel()
+
+        let pages = try parseOggPages(ogg)
+        guard let lastPage = pages.last else {
+            return XCTFail("Expected at least one Ogg page")
+        }
+
+        XCTAssertTrue(lastPage.headerType & 0x04 != 0, "Last Ogg page should carry EOS")
+        XCTAssertEqual(lastPage.granulePosition, 2_880, "Three 20 ms packets must advance granule in 48 kHz ticks")
+    }
+
     func testDecodeWithoutOpusIdentificationCompletesWithoutPCM() {
         let decoder = OpusOGGDecoder()
         var values = 0
@@ -109,4 +147,48 @@ private func makeToneFrame(samplesPerFrame: Int, sampleRate: Int, frameIndex: In
         }
     }
     return data
+}
+
+private struct ParsedOggPage {
+    let headerType: UInt8
+    let granulePosition: Int64
+}
+
+private func parseOggPages(_ data: Data) throws -> [ParsedOggPage] {
+    var pages: [ParsedOggPage] = []
+    var offset = data.startIndex
+
+    while offset < data.endIndex {
+        guard data.distance(from: offset, to: data.endIndex) >= 27 else {
+            throw NSError(domain: "OpusOGGTests", code: 1, userInfo: [NSLocalizedDescriptionKey: "Truncated Ogg page header"])
+        }
+        let capture = data[offset ..< offset + 4]
+        guard capture.elementsEqual(Data([0x4F, 0x67, 0x67, 0x53])) else {
+            throw NSError(domain: "OpusOGGTests", code: 2, userInfo: [NSLocalizedDescriptionKey: "Invalid Ogg capture pattern"])
+        }
+
+        let headerType = data[offset + 5]
+        let granuleRange = (offset + 6) ..< (offset + 14)
+        let granulePosition = data[granuleRange].enumerated().reduce(Int64(0)) { partial, entry in
+            partial | (Int64(entry.element) << (entry.offset * 8))
+        }
+
+        let segmentCount = Int(data[offset + 26])
+        let segmentTableStart = offset + 27
+        let segmentTableEnd = segmentTableStart + segmentCount
+        guard segmentTableEnd <= data.endIndex else {
+            throw NSError(domain: "OpusOGGTests", code: 3, userInfo: [NSLocalizedDescriptionKey: "Truncated Ogg segment table"])
+        }
+
+        let bodyLength = data[segmentTableStart ..< segmentTableEnd].reduce(0) { $0 + Int($1) }
+        let pageEnd = segmentTableEnd + bodyLength
+        guard pageEnd <= data.endIndex else {
+            throw NSError(domain: "OpusOGGTests", code: 4, userInfo: [NSLocalizedDescriptionKey: "Truncated Ogg page body"])
+        }
+
+        pages.append(ParsedOggPage(headerType: headerType, granulePosition: granulePosition))
+        offset = pageEnd
+    }
+
+    return pages
 }
